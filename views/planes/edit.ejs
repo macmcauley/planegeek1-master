@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Edit <%= plane.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/planes/<%= plane._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="plane[name]" value="<%= plane.name %>">
+                </div>
+                <div class="form-group">
+                <div class="form-group">
+                    <input class="form-control" type="number" name="plane[price]" value="<%= plane.price %> "placeholder="price" min="0.01" step="0.01">
+                </div>
+                    <input class="form-control" type="text" name="plane[image]" value="<%= plane.image %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="plane[description]" value="<%= plane.description %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/planes">Go back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>

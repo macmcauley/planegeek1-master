@@ -1,0 +1,31 @@
+<% include ../partials/header %> 
+
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h1>Welcome To PlaneGeek!</h1>
+             <p>View our planes from all over the world</p>
+             <p>
+                <a class="btn btn-primary btn-large" href="/planes/new">Add new plane</a>
+             </p>
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% planes.forEach(function(plane){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= plane.image %>">
+                   <div class="caption">
+                       <h4><%= plane.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/planes/<%= plane._id %>" class="btn btn-primary btn-sm">More info</a></a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

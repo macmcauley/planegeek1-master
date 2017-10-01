@@ -1,0 +1,22 @@
+/*.thumbnail .img-responsive {*/
+/*    border-radius: 100%;*/
+/*    height: 130px;*/
+/*    width: 160px;*/
+/*}*/
+
+.thumbnail {
+    height: 100%;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+h4 {
+    font-size: 18px;
+    display: inline;
+}
